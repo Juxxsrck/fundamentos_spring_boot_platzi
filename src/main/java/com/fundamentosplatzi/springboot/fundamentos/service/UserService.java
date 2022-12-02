@@ -46,6 +46,6 @@ public class UserService {
                             user.setName(newUser.getName());
                             return userRepository.save(user);
                         }
-                ).orElseThrow(()->new RuntimeException("No se encontro usuario a modificar"));
+                ).get();
     }
 }
